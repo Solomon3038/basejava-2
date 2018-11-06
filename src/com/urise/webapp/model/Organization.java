@@ -2,6 +2,7 @@ package com.urise.webapp.model;
 
 import com.urise.webapp.Util.DateUtil;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.ArrayList;
@@ -12,7 +13,7 @@ import java.util.Objects;
 import static com.urise.webapp.Util.DateUtil.NOW;
 import static com.urise.webapp.Util.DateUtil.of;
 
-public class Organization {
+public class Organization implements Serializable {
     private final Link homePage;
     private List<Position> positions = new ArrayList<>();
 
@@ -24,6 +25,7 @@ public class Organization {
         this.homePage = homePage;
         this.positions = positions;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -43,18 +45,18 @@ public class Organization {
         return "Organization(" + homePage + "," + positions + ')';
     }
 
-    public static class Position {
+    public static class Position implements Serializable {
         private final LocalDate startDate;
         private final LocalDate endDate;
         private final String title;
         private final String description;
 
-        public Position(int startYear, Month startMonth, String title, String description){
-            this(DateUtil.of(startYear,startMonth),NOW, title, description);
+        public Position(int startYear, Month startMonth, String title, String description) {
+            this(DateUtil.of(startYear, startMonth), NOW, title, description);
         }
 
-        public Position(int startYear, Month startMonth, int endYear, Month endMonth, String title, String description){
-            this(of(startYear,startMonth), of(endYear, endMonth), title, description);
+        public Position(int startYear, Month startMonth, int endYear, Month endMonth, String title, String description) {
+            this(of(startYear, startMonth), of(endYear, endMonth), title, description);
         }
 
         public Position(LocalDate startDate, LocalDate endDate, String title, String description) {
