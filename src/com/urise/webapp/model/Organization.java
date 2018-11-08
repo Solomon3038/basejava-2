@@ -14,6 +14,8 @@ import static com.urise.webapp.Util.DateUtil.NOW;
 import static com.urise.webapp.Util.DateUtil.of;
 
 public class Organization implements Serializable {
+    public static final long serialVersionUID = 1L;
+
     private final Link homePage;
     private List<Position> positions = new ArrayList<>();
 
