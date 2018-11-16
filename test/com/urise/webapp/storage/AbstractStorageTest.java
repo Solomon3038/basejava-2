@@ -14,8 +14,8 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 public abstract class AbstractStorageTest {
-    //protected static final File STORAGE_DIR = new File("E:\\Java\\Courses\\basejava\\Storage");
-    protected static final File STORAGE_DIR = new File("D:\\Develop\\basejava\\Storage");
+    protected static final File STORAGE_DIR = new File("E:\\Java\\Courses\\basejava\\Storage");
+    //protected static final File STORAGE_DIR = new File("D:\\Develop\\basejava\\Storage");
 
     protected Storage storage;
 
@@ -37,6 +37,7 @@ public abstract class AbstractStorageTest {
 
         R1.addContact(ContactType.MAIL, "mail1@ya.ru");
         R1.addContact(ContactType.PHONE, "11111");
+
         R1.addSection(SectionType.OBJECTIVE, new TextSection("Objective1"));
         R1.addSection(SectionType.PERSONAL, new TextSection("Personal data"));
         R1.addSection(SectionType.ACHIEVEMENT, new ListSection("Achivment11", "Achivment12", "Achivment13"));
