@@ -1,4 +1,4 @@
 INSERT INTO resume (uuid, full_name) VALUES
-  ('7de882da-02f2-4d16-8daa-60660aaf4071', 'Name1'),
-  ('a97b3ac3-3817-4c3f-8a5f-178497311f1d', 'Name2'),
-  ('dd0a70d1-5ed3-479a-b452-d5e04f21ca73', 'Name3');
+  ('3473b7c6-0b0c-44a3-bb4d-29fe852fc28a', 'Name1'),
+  ('be2fae32-346e-4f81-a754-a10628b561a5', 'Name2'),
+  ('f51971e5-0084-4225-b2b3-afd5465678bd', 'Name3');
