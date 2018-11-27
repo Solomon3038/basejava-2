@@ -1,7 +1,7 @@
 package com.urise.webapp.model;
 
-import com.urise.webapp.Util.DateUtil;
-import com.urise.webapp.Util.LocalDateAdapter;
+import com.urise.webapp.util.DateUtil;
+import com.urise.webapp.util.LocalDateAdapter;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -14,8 +14,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import static com.urise.webapp.Util.DateUtil.NOW;
-import static com.urise.webapp.Util.DateUtil.of;
+import static com.urise.webapp.util.DateUtil.NOW;
+import static com.urise.webapp.util.DateUtil.of;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Organization implements Serializable {
