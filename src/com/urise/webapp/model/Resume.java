@@ -9,13 +9,10 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
-/**
- * Initial resume class
- */
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Resume implements Comparable<Resume>, Serializable {
-    public static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     // Unique identifier
     private String uuid;
@@ -39,6 +36,10 @@ public class Resume implements Comparable<Resume>, Serializable {
         this.fullName = fullName;
     }
 
+    public String getUuid() {
+        return uuid;
+    }
+
     public String getFullName() {
         return fullName;
     }
@@ -55,10 +56,6 @@ public class Resume implements Comparable<Resume>, Serializable {
         return sections;
     }
 
-    public String getUuid() {
-        return uuid;
-    }
-
     public String getContact(ContactType type) {
         return contacts.get(type);
     }
@@ -67,11 +64,11 @@ public class Resume implements Comparable<Resume>, Serializable {
         return sections.get(type);
     }
 
-    public void addContact(ContactType type, String value) {
+    public void setContact(ContactType type, String value) {
         contacts.put(type, value);
     }
 
-    public void addSection(SectionType type, Section section) {
+    public void setSection(SectionType type, Section section) {
         sections.put(type, section);
     }
 
