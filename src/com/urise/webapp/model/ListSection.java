@@ -5,14 +5,17 @@ import java.util.List;
 import java.util.Objects;
 
 public class ListSection extends Section {
-    public static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = 1L;
+
+    public static final ListSection EMPTY = new ListSection("");
 
     private List<String> items;
 
     public ListSection() {
     }
 
-    public ListSection(String... items){
+    public ListSection(String... items) {
         this(Arrays.asList(items));
     }
 
@@ -38,6 +41,7 @@ public class ListSection extends Section {
         ListSection that = (ListSection) o;
 
         return items.equals(that.items);
+
     }
 
     @Override

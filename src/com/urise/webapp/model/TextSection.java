@@ -3,7 +3,10 @@ package com.urise.webapp.model;
 import java.util.Objects;
 
 public class TextSection extends Section {
-    public static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = 1L;
+
+    public static final TextSection EMPTY = new TextSection("");
 
     private String content;
 
@@ -32,6 +35,7 @@ public class TextSection extends Section {
         TextSection that = (TextSection) o;
 
         return content.equals(that.content);
+
     }
 
     @Override
