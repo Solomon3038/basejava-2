@@ -36,11 +36,15 @@ public class TestData {
                 new OrganizationSection(
                         new Organization("Organization11", "http://Organization11.ru",
                                 new Organization.Position(2005, Month.JANUARY, "position1", "content1"),
-                                new Organization.Position(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2"))));
-        R1.setSection(SectionType.EXPERIENCE,
+                                new Organization.Position(2001, Month.MARCH, 2005, Month.JANUARY, "position2", "content2")),
+                new Organization("Organization12", "http://Organization12.ru",
+                        new Organization.Position(2005, Month.JANUARY, "position21", "content21"),
+                        new Organization.Position(2001, Month.MARCH, 2005, Month.JANUARY, "position22", "content22")))
+                );
+       /* R1.setSection(SectionType.EXPERIENCE,
                 new OrganizationSection(
                         new Organization("Organization2", "http://Organization2.ru",
-                                new Organization.Position(2015, Month.JANUARY, "position1", "content1"))));
+                                new Organization.Position(2015, Month.JANUARY, "position1", "content1"))));*/
         R1.setSection(SectionType.EDUCATION,
                 new OrganizationSection(
                         new Organization("Institute", null,

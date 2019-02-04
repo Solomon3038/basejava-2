@@ -61,6 +61,7 @@ public class ResumeServlet extends HttpServlet {
                     case ACHIEVEMENT:
                     case QUALIFICATIONS:
                         r.setSection(type, new ListSection(value.split("\\n")));
+                       // String[] values = request.getParameterValues(type.name());
                         break;
                     case EDUCATION:
                     case EXPERIENCE:
@@ -161,3 +162,30 @@ public class ResumeServlet extends HttpServlet {
         ).forward(request, response);
     }
 }
+/*
+
+switch (action) {
+        case "delete":
+        storage.delete(uuid);
+        response.sendRedirect("resume");
+        return;
+        case "view":
+        case "viewnoedit":
+        resume = (Resume) storage.get(uuid);
+        getImage(request, resume);
+        break;
+        case "edit":
+        case "noedit":
+        resume = (Resume) storage.get(uuid);
+        break;
+        case "new":
+        resume = new Resume();
+        break;
+default:
+        throw new IllegalArgumentException("Action " + action + " is illegal");
+        }
+        request.setAttribute("resume", resume);
+        request.getRequestDispatcher(
+        ("noedit".equals(action) ? "/WEB-INF/jsp/noedit.jsp" : "view".equals(action) ? "/WEB-INF/jsp/view.jsp" : "edit".equals(action) ? "/WEB-INF/jsp/edit.jsp" :
+        "viewnoedit".equals(action) ? "/WEB-INF/jsp/viewnoedit.jsp" : "/WEB-INF/jsp/new.jsp")
+        ).forward(request, response);*/

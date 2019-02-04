@@ -1,7 +1,7 @@
 package com.urise.webapp.storage.serializer;
 
-import com.urise.webapp.util.XmlParser;
 import com.urise.webapp.model.*;
+import com.urise.webapp.util.XmlParser;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

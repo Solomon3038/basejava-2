@@ -1,21 +1,23 @@
 package com.urise.webapp.storage;
 
-import org.junit.Before;
-import org.junit.Test;
+
 import com.urise.webapp.Config;
 import com.urise.webapp.exception.ExistStorageException;
 import com.urise.webapp.exception.NotExistStorageException;
 import com.urise.webapp.model.ContactType;
 import com.urise.webapp.model.Resume;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+
+import static com.urise.webapp.TestData.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static com.urise.webapp.TestData.*;
 
 public abstract class AbstractStorageTest {
     protected static final File STORAGE_DIR = Config.get().getStorageDir();

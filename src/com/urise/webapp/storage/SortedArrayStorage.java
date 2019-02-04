@@ -5,7 +5,7 @@ import com.urise.webapp.model.Resume;
 import java.util.Arrays;
 import java.util.Comparator;
 
-import static java.util.Comparator.*;
+import static java.util.Comparator.comparing;
 
 public class SortedArrayStorage extends AbstractArrayStorage {
 
@@ -38,5 +38,6 @@ public class SortedArrayStorage extends AbstractArrayStorage {
     protected Integer getSearchKey(String uuid) {
         Resume searchKey = new Resume(uuid, "dummy");
         return Arrays.binarySearch(storage, 0, size, searchKey, RESUME_COMPARATOR);
+        //
     }
 }

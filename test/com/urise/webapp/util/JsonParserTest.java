@@ -1,10 +1,11 @@
 package com.urise.webapp.util;
 
-import org.junit.Assert;
-import org.junit.Test;
+
 import com.urise.webapp.model.Resume;
 import com.urise.webapp.model.Section;
 import com.urise.webapp.model.TextSection;
+import org.junit.Assert;
+import org.junit.Test;
 
 import static com.urise.webapp.TestData.R1;
 

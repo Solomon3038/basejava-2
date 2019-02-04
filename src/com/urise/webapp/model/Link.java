@@ -4,6 +4,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import java.io.Serializable;
 import java.util.Objects;
+
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Link implements Serializable {
     public static final long serialVersionUID = 1L;
